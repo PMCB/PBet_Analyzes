@@ -1,0 +1,34 @@
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container > .login,
+.main-container > .hero-body{
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.form-inline{
+    display: inline-flex;
+}
+
+.bet_red{
+    background-color: tomato;
+    color: white;
+}
+
+.bet_green{
+    background-color:mediumseagreen;
+    color: white;
+}
