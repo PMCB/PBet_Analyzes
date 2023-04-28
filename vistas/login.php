@@ -20,7 +20,7 @@
 		</div>
 
 		<p class="has-text-centered mb-4 mt-3">
-			<button type="submit" class="button is-info is-rounded">Iniciar Sessão</button>
+			<button type="submit" class="button is-info is-rounded">Iniciar Sessão 2</button>
 		</p>
 
 		<?php
