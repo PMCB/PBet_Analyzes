@@ -2,7 +2,7 @@
 	
 	# Database connection #
 	function connection(){
-		$pdo = new PDO('mysql:host=localhost;dbname=bet', 'root', '');
+		$pdo = new PDO('mysql:host=localhost;dbname=pmcb_bet', 'pmcb', '7Am[yEl@TplB');
 		return $pdo;
 	}
 
