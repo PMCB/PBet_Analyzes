@@ -3,6 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/pmcb/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp -R .well-known $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R img $DEPLOYPATH
     - /bin/cp -R inc $DEPLOYPATH
