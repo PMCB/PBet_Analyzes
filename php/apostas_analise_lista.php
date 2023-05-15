@@ -20,7 +20,7 @@
         }
 
         $lucro_league_entrada=connection();
-        $lucro_league_entrada=$lucro_league_entrada->query("SELECT league,entrada,sum(lucro) lucro FROM `apostas` group by league,entrada order by league ASC,lucro DESC;");
+        $lucro_league_entrada=$lucro_league_entrada->query("SELECT league,entrada,count(entrada) n_ent,sum(lucro) lucro FROM `apostas` group by league,entrada order by lucro DESC;");
         if ($lucro_league_entrada->rowCount()>0){ 
             $lucro_league_entrada=$lucro_league_entrada->fetchAll();
         }
@@ -184,6 +184,7 @@
                             <tr>
                                 <th><span class="tag is-link is-medium">Liga</span></th>
                                 <th><span class="tag is-link is-medium">Entrada</span></th>
+                                <th><span class="tag is-link is-medium">Nº Entradas</span></th>
                                 <th><span class="tag is-link is-medium">Lucro</span></th>
                             </tr>
                         </thead>
@@ -193,6 +194,7 @@
                                 echo '<tr>';
                                 echo '<td>'.$rows['league'].'</td>';
                                 echo '<td>'.$rows['entrada'].'</td>';
+                                echo '<td>'.$rows['n_ent'].'</td>';
                                 if ($rows['lucro']>0){
                                     echo '<td><span class="tag is-success">'.$rows['lucro'].'</span></td>';
                                 } elseif ($rows['lucro']<0){
