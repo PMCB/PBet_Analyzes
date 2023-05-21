@@ -81,8 +81,6 @@
                     $connection_v2=connection_v2();                    
                     $odds=$connection_v2->query($consulta_odd);
                     $odds=$odds->fetch();
-                    echo $odds['Odd_BTTS_Yes'];
-                    echo $odds['Odd_BTTS_No'];
                     $tabla.='<td>'.$odds['Odd_BTTS_Yes'].'</td><td>'.$odds['Odd_BTTS_No'].'</td>';
 
                                
