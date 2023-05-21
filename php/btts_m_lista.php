@@ -79,7 +79,9 @@
                     //
                     $consulta_odd="select Odd_BTTS_Yes,Odd_BTTS_No from jogos where Home = (select team_fs from equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from equipas where team_ss = '".$rows['eq_fora']."')";                    
                     $connection_v2=connection_v2();
+                    
                     $odds=$connection_v2->query($consulta_odd);
+                    echo $odds;
                     $odds=$odds->fetchAll();
                     echo $odds['Odd_BTTS_Yes'];
                     echo $odds['Odd_BTTS_No'];
