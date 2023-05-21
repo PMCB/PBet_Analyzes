@@ -77,7 +77,7 @@
                     }
 
                     //
-                    $consulta_odd="select Odd_BTTS_Yes,Odd_BTTS_No from jogos where Home = (select team_fs from pmcb_bet.equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from pmcb_bet.equipas where team_ss = '".$rows['eq_fora']."')";
+                    $consulta_odd="select Odd_BTTS_Yes,Odd_BTTS_No from jogos where Home = (select team_fs from equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from equipas where team_ss = '".$rows['eq_fora']."')";
                     echo $consulta_odd;
                     $connection_v2=connection_v2();
                     $odds=$connection_v2->query($consulta_odd);
