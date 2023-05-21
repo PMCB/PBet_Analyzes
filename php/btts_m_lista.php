@@ -78,8 +78,9 @@
 
                     //
                     $consulta_odd="select Odd_BTTS_Yes,Odd_BTTS_No from pmcb_bet_v2.jogos where Home = (select team_fs from pmcb_bet.equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from pmcb_bet.equipas where team_ss = '".$rows['eq_fora']."')";
-                    $connection=connection_v2();
-                    $odds=$connection->query($consulta_odd);
+                    echo $consulta_odd;
+                    $connection_v2=connection_v2();
+                    $odds=$connection_v2->query($consulta_odd);
                     $odds=$odds->fetchAll();
                     $tabla.='<td>'.$odds['Odd_BTTS_Yes'].'</td><td>'.$odds['Odd_BTTS_No'].'</td>';
 
