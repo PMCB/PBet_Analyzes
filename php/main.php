@@ -6,6 +6,11 @@
 		return $pdo;
 	}
 
+	function connection_v2(){
+		$pdo = new PDO('mysql:host=localhost;dbname=pmcb_bet_v2', 'pmcb', 'lp^2Ay]UEwX-');
+		return $pdo;
+	}
+
 
 	# verify data #
 	function verify_data($filter,$chain){

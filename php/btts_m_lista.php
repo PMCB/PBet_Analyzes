@@ -36,6 +36,8 @@
                     <th>Xg Casa</th>
                     <th>Xg Fora</th>
                     <th>% BTTS</th>
+                    <th>Odd Yes</th>
+                    <th>Odd No</th>
                     <th colspan="2">Acções</th>
                 </tr>
             </thead>
@@ -73,6 +75,14 @@
                     if ($rows['btts_yes']>=80 && $rows['btts_yes']<=100){
                         $tabla.='<td><span class="tag is-success" style="background-color:#006400;">'.$rows['btts_yes'].'%</span></td>';
                     }
+
+                    //
+                    $consulta_odd="select Odd_BTTS_Yes,Odd_BTTS_No from pmcb_bet_v2.jogos where Home = (select team_fs from pmcb_bet.equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from pmcb_bet.equipas where team_ss = '".$rows['eq_fora']."')";
+                    $connection=connection_v2();
+                    $odds=$connection->query($consulta_odd);
+                    $odds=$odds->fetchAll();
+                    $tabla.='<td>'.$odds['Odd_BTTS_Yes'].'</td><td>'.$odds['Odd_BTTS_No'].'</td>';
+
                                
             $tabla.='             
                     <td>
