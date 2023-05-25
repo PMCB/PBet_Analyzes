@@ -40,6 +40,9 @@
                     <th>1</th>
                     <th>X</th>
                     <th>2</th>
+                    <th>Odd 1</th>
+                    <th>Odd X</th>
+                    <th>Odd 2</th>
                     <th colspan="2">Acções</th>
                 </tr>
             </thead>
@@ -94,7 +97,12 @@
                     if ($rows['prob_2']>=90 && $rows['prob_2']<=100){
                         $tabla.='<td><span class="tag is-success" style="background-color:#006400;">'.$rows['prob_2'].'%</span></td>';
                     }
-                               
+                          
+                    $consulta_odd="select Odd_H,Odd_D,Odd_A from jogos where Home = (select team_fs from equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from equipas where team_ss = '".$rows['eq_fora']."')";                    
+                    $connection_v2=connection_v2();                    
+                    $odds=$connection_v2->query($consulta_odd);
+                    $odds=$odds->fetch();
+                    $tabla.='<td>'.$odds['Odd_H'].'</td><td>'.$odds['Odd_D'].'</td><td>'.$odds['Odd_A'].'</td>';
             $tabla.='            
                     <td>
                         <a href="index.php?vista=back_fora_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
