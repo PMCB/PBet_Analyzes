@@ -36,6 +36,8 @@
                     <th>Xg Casa</th>
                     <th>Xg Fora</th>
                     <th>% Over 2,5</th>
+                    <th>Odd O2,5</th>
+                    <th>Odd U2,5</th>
                     <th colspan="2">Acções</th>
                 </tr>
             </thead>
@@ -72,6 +74,12 @@
                     if ($rows['O25']>=90 && $rows['O25']<=100){
                         $tabla.='<td><span class="tag is-success" style="background-color:#006400;">'.$rows['O25'].'%</span></td>';
                     }
+
+                    $consulta_odd="select Odd_Over25,Odd_Under25 from jogos where Home = (select team_fs from equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from equipas where team_ss = '".$rows['eq_fora']."')";                    
+                    $connection_v2=connection_v2();                    
+                    $odds=$connection_v2->query($consulta_odd);
+                    $odds=$odds->fetch();
+                    $tabla.='<td>'.$odds['Odd_Over25'].'</td><td>'.$odds['Odd_Under25'].'</td>';
                                
             $tabla.='<td>
                         <a href="index.php?vista=o25_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
