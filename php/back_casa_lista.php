@@ -94,6 +94,9 @@
                     }
                     if ($rows['prob_1']>=90 && $rows['prob_1']<=100){
                         $tabla.='<td><span class="tag is-success" style="background-color:#006400;">'.$rows['prob_1'].'%</span></td>';
+                    } 
+                    else {
+                        $tabla.='<td>'.$rows['prob_1'].'</td>';
                     }
                                
             $tabla.='

@@ -97,6 +97,9 @@
                     if ($rows['prob_2']>=90 && $rows['prob_2']<=100){
                         $tabla.='<td><span class="tag is-success" style="background-color:#006400;">'.$rows['prob_2'].'%</span></td>';
                     }
+                    else {
+                        $tabla.='<td>'.$rows['prob_2'].'</td>';
+                    }
                           
                     $consulta_odd="select Odd_H,Odd_D,Odd_A from jogos where Home = (select team_fs from equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from equipas where team_ss = '".$rows['eq_fora']."')";                    
                     $connection_v2=connection_v2();                    
