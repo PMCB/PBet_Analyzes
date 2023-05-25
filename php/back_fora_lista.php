@@ -91,13 +91,13 @@
                     if ($rows['prob_2']>=50 && $rows['prob_2']<70){
                         $tabla.='<td><span class="tag is-success" style="background-color:#00FF00;color:black;">'.$rows['prob_2'].'%</span></td>';
                     }
-                    elseif  ($rows['prob_2']>=70 && $rows['prob_2']<90){
+                    if  ($rows['prob_2']>=70 && $rows['prob_2']<90){
                         $tabla.='<td><span class="tag is-success" style="background-color:#32CD32;">'.$rows['prob_2'].'%</span></td>';
                     }
-                    elseif  ($rows['prob_2']>=90 && $rows['prob_2']<=100){
+                    if  ($rows['prob_2']>=90 && $rows['prob_2']<=100){
                         $tabla.='<td><span class="tag is-success" style="background-color:#006400;">'.$rows['prob_2'].'%</span></td>';
                     }
-                    else {
+                    if ($rows['prob_2']<50) {
                         $tabla.='<td>'.$rows['prob_2'].'</td>';
                     }
                           
