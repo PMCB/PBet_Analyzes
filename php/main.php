@@ -7,7 +7,7 @@
 	}
 
 	function connection_v2(){
-		$pdo = new PDO('mysql:host=localhost;dbname=pmcb_bet_v2', 'pmcb', 'lp^2Ay]UEwX-');
+		$pdo = new PDO('mysql:host=localhost;dbname=pmcb_bet', 'pmcb', 'lp^2Ay]UEwX-');
 		return $pdo;
 	}
 
