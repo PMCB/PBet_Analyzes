@@ -88,6 +88,9 @@
                     <td>
                         <a href="index.php?vista=btts_m_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
                     </td>
+                    <td>
+                    <a href="index.php?vista=btts_m_analise&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Analise</a>
+                </td>
                 </tr>
             ';
             $contador++;
