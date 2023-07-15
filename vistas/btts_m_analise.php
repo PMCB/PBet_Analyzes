@@ -19,7 +19,7 @@
             $dados=$check_game->fetch();        
     ?>
 
-    <h1><?php echo $dados['eq_casa']; ?></h1>
+    <h1><b><?php echo $dados['eq_casa']; ?> VS <?php echo $dados['eq_fora']; ?></b></h1>
 
     <?php
         }else{
