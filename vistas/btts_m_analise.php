@@ -16,7 +16,15 @@
         $check_game=$check_game->query("SELECT * FROM prog WHERE id='$id'");
 
         if ($check_game->rowCount()>0){ 
-            $dados=$check_game->fetch();
+            $dados=$check_game->fetch();        
+    ?>
+
+    <h1><?php echo $dados['eq_casa']; ?></h1>
+
+    <?php
+        }else{
+            include "./inc/error_alert.php";
         }
+        $check_game=null;
     ?>
 </div>
