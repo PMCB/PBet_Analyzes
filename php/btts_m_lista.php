@@ -38,7 +38,8 @@
                     <th>% BTTS</th>
                     <th>Odd Yes</th>
                     <th>Odd No</th>
-                    <th colspan="2">Acções</th>
+                    <th>Acções</th>
+                    <th>Análise</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,7 +90,7 @@
                         <a href="index.php?vista=btts_m_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
                     </td>
                     <td>
-                    <a href="index.php?vista=btts_m_analise&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Analise</a>
+                    <a href="index.php?vista=btts_m_analise&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Análise</a>
                 </td>
                 </tr>
             ';
