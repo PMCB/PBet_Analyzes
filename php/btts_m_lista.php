@@ -90,7 +90,7 @@
                         <a href="index.php?vista=btts_m_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
                     </td>
                     <td>
-                    <a href="index.php?vista=btts_m_analise&id_up='.$rows['id'].'" class="button is-danger is-outlined">Análise</a>
+                    <a href="index.php?vista=btts_m_analise&id_up='.$rows['id'].'" class="button is-danger is-outlined is-small">Análise</a>
                 </td>
                 </tr>
             ';
