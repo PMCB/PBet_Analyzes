@@ -355,11 +355,12 @@
         }
         $check_game=null;
 
+
         echo "</tr>";
         echo "<tr>";
-        echo "<td>".$eq_casa_ss."</td>";       
+        echo "<td>".$eq_fora_ss."</td>";       
 
-        $check_game=$check_conn->query("select count(id_jogo) vitoria_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) vitoria_fora from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -370,7 +371,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) empate_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) empate_fora from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -381,7 +382,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) derrota_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) derrota_fora from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -392,7 +393,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) vitoria_casa_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) vitoria_fora_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -403,7 +404,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) empate_casa_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) empate_fora_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -414,7 +415,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) derrota_casa_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) derrota_fora_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -426,7 +427,7 @@
         $check_game=null;
 
 
-        $check_game=$check_conn->query("select count(id_jogo) vitoria_casa_fora from jogos Where (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) vitoria_fora_fora from jogos Where (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT<Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -437,7 +438,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) empate_casa_fora from jogos Where (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) empate_fora_fora from jogos Where (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT=Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -448,7 +449,7 @@
         }
         $check_game=null;
 
-        $check_game=$check_conn->query("select count(id_jogo) derrota_casa_fora from jogos Where (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT);");
+        $check_game=$check_conn->query("select count(id_jogo) derrota_fora_fora from jogos Where (Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."') and Goal_home_FT>Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
