@@ -54,13 +54,10 @@
             echo "</div>";
             echo "</div>";
 
-            echo "<div class=\"columns\">";
             echo "<div class=\"column is-1\">";
             echo "<h3><b>X</b></h3>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$prob_x."%</h3>";
-
-            echo "</div>";
             echo "</div>";
 
             echo "<div class=\"columns\">";
