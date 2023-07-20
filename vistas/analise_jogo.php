@@ -209,7 +209,7 @@
     <?php
         echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
-        echo "<table class=\"table is-bordered\">";
+        echo "<table class=\"table is-striped\">";
         echo "<tr>";
         echo "<th></th>";
         echo "<th style=\"text-align: center;\">Geral</th>";
@@ -233,7 +233,7 @@
 
 
         echo "<div class=\"column\">";
-        echo "<table class=\"table is-bordered\">";
+        echo "<table class=\"table is-striped\">";
         echo "<tr>";
         echo "<th></th>";
         echo "<th colspan=\"3\" style=\"text-align: center;\">Geral</th>";
