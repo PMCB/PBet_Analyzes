@@ -255,7 +255,7 @@
         echo "<tr>";
         echo "<td>".$eq_casa_ss."</td>";        
         
-        $check_game=$check_conn->query("select count(id_jogo) vitoria_casa from jogos Where Home = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Goal_home_FT>Goal_away_FT;");
+        $check_game=$check_conn->query("select count(id_jogo) vitoria_casa from jogos Where (Home = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Goal_home_FT>Goal_away_FT) or (Away = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Goal_home_FT<Goal_away_FT);");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
