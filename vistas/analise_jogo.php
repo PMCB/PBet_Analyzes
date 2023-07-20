@@ -105,7 +105,7 @@
             echo "</div>";
 
             echo "</div>";
-            echo "</div>";
+            
     
         }else{
             include "./inc/error_alert.php";
@@ -197,6 +197,7 @@
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$Odd_BTTS_No."</h3>";
+            echo "</div>";
             echo "</div>";
             echo "</div>";
         }else{
