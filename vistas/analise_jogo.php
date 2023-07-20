@@ -45,13 +45,12 @@
 
   
 
-    echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."></b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>"
+        echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."></b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>"
 
     
         }else{
             include "./inc/error_alert.php";
         }
         $check_game=null;
-    
+        ?>    
 </div>
-?>
