@@ -209,7 +209,7 @@
     <?php
         echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
-        echo "<table>";
+        echo "<table class=\"table is-bordered\">";
         echo "<tr>";
         echo "<th></th>";
         echo "<th>Geral</th>";
