@@ -126,8 +126,7 @@
         }
         $check_game=null;
 
-        $check_game=connection();
-        $check_game=$check_game->query("select team_fs from equipas where team_ss = '$eq_fora_ss'");
+        $check_game=$check_conn->query("select team_fs from equipas where team_ss = '$eq_fora_ss'");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -135,6 +134,76 @@
         }else{
             include "./inc/error_alert.php";
         }
-        $check_game=null;        
+        $check_game=null;  
+
+
+        $check_game=$check_conn->query("select Odd_H,Odd_D,Odd_A,Odd_Over25,Odd_Under25,Odd_BTTS_Yes,Odd_BTTS_No from jogos where Home = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."')");
+
+        if ($check_game->rowCount()>0){ 
+            $dados=$check_game->fetch();
+            $Odd_H=$dados['Odd_H'];
+            $Odd_D=$dados['Odd_D'];
+            $Odd_A=$dados['Odd_A'];
+            $Odd_Over25=$dados['Odd_Over25'];
+            $Odd_Under25=$dados['Odd_Under25'];
+            $Odd_BTTS_Yes=$dados['Odd_BTTS_Yes'];
+            $Odd_BTTS_No=$dados['Odd_BTTS_No'];
+
+            echo "<div class=\"columns\">";
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>Home</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_H."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>Draw</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_D."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>Away</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_A."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>Over 2,5</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_Over25."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>Under 2,5</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_Under25."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>BTTS Yes</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_BTTS_Yes."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>BTTS No</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$Odd_BTTS_No."%</h3>";
+            echo "</div>";
+            echo "</div>";
+        }else{
+            include "./inc/error_alert.php";
+        }
+        $check_game=null;
+        
+        
     ?>
 </div>
