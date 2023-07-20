@@ -105,17 +105,13 @@
             echo "</div>";
 
             echo "</div>";
-            
+            echo "</div>";
     
         }else{
             include "./inc/error_alert.php";
         }
         $check_game=null;
-    ?>    
-</div>
-
-<div class="container pb-6 pt-6">
-    <?php        
+<        
         $check_game=$check_conn->query("select team_fs from equipas where team_ss = '$eq_casa_ss'");
 
         if ($check_game->rowCount()>0){ 
@@ -199,12 +195,10 @@
             echo "<h3>".$Odd_BTTS_No."</h3>";
             echo "</div>";
             echo "</div>";
-            echo "</div>";
         }else{
             include "./inc/error_alert.php";
         }
-        $check_game=null;
-        
-        
+        $check_game=null;        
     ?>
+    </div>
 </div>
