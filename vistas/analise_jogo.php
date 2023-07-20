@@ -236,9 +236,9 @@
         echo "<table class=\"table is-bordered\">";
         echo "<tr>";
         echo "<th></th>";
-        echo "<th colspan=\"3\">Geral</th>";
-        echo "<th colspan=\"3\">Casa</th>";
-        echo "<th colspan=\"3\">Fora</th>";
+        echo "<th colspan=\"3\" style=\"text-align: center;\">Geral</th>";
+        echo "<th colspan=\"3\" style=\"text-align: center;\">Casa</th>";
+        echo "<th colspan=\"3\" style=\"text-align: center;\">Fora</th>";
         echo "</tr>";
         echo "<tr>";
         echo "<th></th>";
