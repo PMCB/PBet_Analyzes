@@ -47,7 +47,9 @@
 
             echo "<div class=\"columns\">";
             echo "<div class=\"column is-1\">";
-            echo "<b>Prob 1</b>";
+            echo "<h3><b>Prob 1</b></h3>";
+            echo "<div class=\"column is-2\">";
+            echo "<h3>".$prob_1."%</h3>";
 
             echo "</div>";
             echo "</div>";
