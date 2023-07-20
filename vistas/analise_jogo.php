@@ -207,6 +207,8 @@
 
 <div class="container pb-6 pt-6">
     <?php
+        echo "<div class=\"columns\">";
+        echo "<div class=\"column\">";
         echo "<table>";
         echo "<tr>";
         echo "<th></th>";
@@ -227,5 +229,7 @@
         echo "<td>".$pos_eq_fora_away."</td>";
         echo "</tr>";
         echo "</table>";
+        echo "</div>";
+        echo "</div>";
     ?>
 </div>
