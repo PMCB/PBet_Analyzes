@@ -16,10 +16,13 @@
         $check_game=$check_game->query("SELECT * FROM prog WHERE id='$id'");
 
         if ($check_game->rowCount()>0){ 
-            $dados=$check_game->fetch();        
+            $dados=$check_game->fetch();
+
+        $eq_casa_ss=$dados['eq_casa'];
+        $eq_fora_ss=$dados['eq_fora'];
     ?>
 
-    <h1 class="title"><b><?php echo $dados['eq_casa']; ?></b> VS <b><?php echo $dados['eq_fora']; ?></b></h1>
+    <h1 class="title"><b><?php echo $eq_casa_ss; ?></b> VS <b><?php echo $eq_fora_ss; ?></b></h1>
 
     <?php
         }else{
