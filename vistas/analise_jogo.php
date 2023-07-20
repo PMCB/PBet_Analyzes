@@ -47,35 +47,35 @@
 
             echo "<div class=\"columns\">";
             echo "<div class=\"column is-1\">";
-            echo "<h3><b>1</b></h3>";
+            echo "<h3 style=\"text-align: right;\"><b>1</b></h3>";
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$prob_1."%</h3>";
             echo "</div>";
 
             echo "<div class=\"column is-1\">";
-            echo "<h3><b>X</b></h3>";
+            echo "<h3 style=\"text-align: right;\"><b>X</b></h3>";
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$prob_x."%</h3>";
             echo "</div>";
 
             echo "<div class=\"column is-1\">";
-            echo "<h3><b>2</b></h3>";
+            echo "<h3 style=\"text-align: right;\"><b>2</b></h3>";
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$prob_2."%</h3>";
             echo "</div>";
 
             echo "<div class=\"column is-1\">";
-            echo "<h3><b>O2,5</b></h3>";
+            echo "<h3 style=\"text-align: right;\"><b>O2,5</b></h3>";
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$O25."%</h3>";
             echo "</div>";
 
             echo "<div class=\"column is-1\">";
-            echo "<h3><b>BTTS</b></h3>";
+            echo "<h3 style=\"text-align: right;\"><b>BTTS</b></h3>";
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$btts_yes."%</h3>";
