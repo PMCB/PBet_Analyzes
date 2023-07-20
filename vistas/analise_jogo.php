@@ -45,6 +45,7 @@
 
             echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."></b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>";
 
+            echo "<div class=\"columns\">";
             echo "<div class=\"column is-1\">";
             echo "<h3><b>1</b></h3>";
             echo "<div class=\"column is-1\">";
@@ -79,6 +80,7 @@
             echo "<h3><b>BTTS</b></h3>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$btts_yes."%</h3>";
+            echo "</div>";
             echo "</div>";
     
         }else{
