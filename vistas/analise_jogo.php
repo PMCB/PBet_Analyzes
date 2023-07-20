@@ -43,7 +43,7 @@
             $btts_resultado=$dados['btts_resultado'];
             $O25_resultado=$dados['O25_resultado'];
 
-            echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."></b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>";
+            echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."</b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>";
 
             echo "<div class=\"columns\">";
             echo "<div class=\"column is-1\">";
@@ -80,6 +80,32 @@
             echo "<div class=\"column is-1\">";
             echo "<h3>".$btts_yes."%</h3>";
             echo "</div>";
+            echo "</div>";
+
+            echo "<div class=\"columns\">";
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>1X2</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$bet_resultado."%</h3>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>Over 2,5</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$O25_resultado."%</h3>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "<div class=\"column is-1\">";
+            echo "<h3 style=\"text-align: right;\"><b>BTTS</b></h3>";
+            echo "</div>";
+            echo "<div class=\"column is-1\">";
+            echo "<h3>".$btts_resultado."%</h3>";
+            echo "</div>";
+            echo "</div>";
+
             echo "</div>";
     
         }else{
