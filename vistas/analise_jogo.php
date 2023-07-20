@@ -212,9 +212,9 @@
         echo "<table class=\"table is-bordered\">";
         echo "<tr>";
         echo "<th></th>";
-        echo "<th>Geral</th>";
-        echo "<th>Casa</th>";
-        echo "<th>Fora</th>";
+        echo "<th style=\"text-align: center;\">Geral</th>";
+        echo "<th style=\"text-align: center;\">Casa</th>";
+        echo "<th style=\"text-align: center;\">Fora</th>";
         echo "</tr>";
         echo "<tr>";
         echo "<td>".$eq_casa_ss."</td>";
@@ -242,18 +242,18 @@
         echo "</tr>";
         echo "<tr>";
         echo "<th></th>";
-        echo "<th>Vitorias</th>";
-        echo "<th>Empates</th>";
-        echo "<th>Derrotas</th>";
-        echo "<th>Vitorias</th>";
-        echo "<th>Empates</th>";
-        echo "<th>Derrotas</th>";
-        echo "<th>Vitorias</th>";
-        echo "<th>Empates</th>";
-        echo "<th>Derrotas</th>";
+        echo "<th style=\"text-align: center;\">Vitorias</th>";
+        echo "<th style=\"text-align: center;\">Empates</th>";
+        echo "<th style=\"text-align: center;\">Derrotas</th>";
+        echo "<th style=\"text-align: center;\">Vitorias</th>";
+        echo "<th style=\"text-align: center;\">Empates</th>";
+        echo "<th style=\"text-align: center;\">Derrotas</th>";
+        echo "<th style=\"text-align: center;\">Vitorias</th>";
+        echo "<th style=\"text-align: center;\">Empates</th>";
+        echo "<th style=\"text-align: center;\">Derrotas</th>";
         echo "</tr>";
         echo "<tr>";
-        
+        echo "<td>".$eq_casa_ss."</td>";        
         
         $check_game=$check_conn->query("select count(id_jogo) vitoria_casa from jogos Where Home = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Goal_home_FT>Goal_away_FT;");
 
