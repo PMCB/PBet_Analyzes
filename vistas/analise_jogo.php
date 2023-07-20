@@ -230,6 +230,50 @@
         echo "</tr>";
         echo "</table>";
         echo "</div>";
+
+
+        echo "<div class=\"column\">";
+        echo "<table class=\"table is-bordered\">";
+        echo "<tr>";
+        echo "<th></th>";
+        echo "<th colspan=\"3\">Geral</th>";
+        echo "<th colspan=\"3\">Casa</th>";
+        echo "<th colspan=\"3\">Fora</th>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<th></th>";
+        echo "<th>Vitorias</th>";
+        echo "<th>Empates</th>";
+        echo "<th>Derrotas</th>";
+        echo "<th>Vitorias</th>";
+        echo "<th>Empates</th>";
+        echo "<th>Derrotas</th>";
+        echo "<th>Vitorias</th>";
+        echo "<th>Empates</th>";
+        echo "<th>Derrotas</th>";
+        echo "</tr>";
+        echo "<tr>";
+        
+        
+        $check_game=$check_conn->query("select count(id_jogo) vitoria_casa from jogos Where Home = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Goal_home_FT>Goal_away_FT;");
+
+        if ($check_game->rowCount()>0){ 
+            $dados=$check_game->fetch();
+            echo "<td>".$dados['vitoria_casa']."</td>";
+
+        }else{
+            echo "<td></td>";
+        }
+        $check_game=null;
+
+        echo "</tr>";
+        echo "</table>";
+        echo "</div>";
+
+
+
+
+
         echo "</div>";
     ?>
 </div>
