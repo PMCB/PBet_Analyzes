@@ -111,7 +111,9 @@
             include "./inc/error_alert.php";
         }
         $check_game=null;
-<        
+    ?>    
+
+    <?php        
         $check_game=$check_conn->query("select team_fs from equipas where team_ss = '$eq_casa_ss'");
 
         if ($check_game->rowCount()>0){ 
@@ -131,7 +133,6 @@
             include "./inc/error_alert.php";
         }
         $check_game=null;  
-
 
         $check_game=$check_conn->query("select Odd_H,Odd_D,Odd_A,Odd_Over25,Odd_Under25,Odd_BTTS_Yes,Odd_BTTS_No from jogos where Home = (select team_fs from equipas where team_ss = '".$eq_casa_ss."') and Away = (select team_fs from equipas where team_ss = '".$eq_fora_ss."')");
 
@@ -198,7 +199,6 @@
         }else{
             include "./inc/error_alert.php";
         }
-        $check_game=null;        
+        $check_game=null;
     ?>
-    </div>
 </div>
