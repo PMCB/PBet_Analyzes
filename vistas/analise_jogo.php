@@ -43,14 +43,15 @@
         $btts_resultado=$dados['btts_resultado'];
         $O25_resultado=$dados['O25_resultado'];
 
-    ?>
+  
 
-    <h1 class="title"><?php echo $pos_eq_casa."º\t" ?><b><?php echo $eq_casa_ss; ?></b> VS <b><?php echo $eq_fora_ss."\t";?></b><?php echo $pos_eq_fora."º"; ?></h1>
+    echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."></b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>"
 
-    <?php
+    
         }else{
             include "./inc/error_alert.php";
         }
         $check_game=null;
-    ?>
+    
 </div>
+?>
