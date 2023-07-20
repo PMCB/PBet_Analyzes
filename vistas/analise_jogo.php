@@ -45,7 +45,7 @@
 
     ?>
 
-    <h1 class="title"><?php echo $pos_eq_casa   ; ?><b><?php echo $eq_casa_ss; ?></b> VS <b><?php echo $eq_fora_ss   ; ?></b><?php echo $pos_eq_fora; ?></h1>
+    <h1 class="title"><?php echo $pos_eq_casa."   " ?><b><?php echo $eq_casa_ss; ?></b> VS <b><?php echo $eq_fora_ss."   ";?></b><?php echo $pos_eq_fora; ?></h1>
 
     <?php
         }else{
