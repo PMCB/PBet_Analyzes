@@ -67,19 +67,11 @@
             echo "<h3>".$prob_2."%</h3>";
             echo "</div>";
 
-
             echo "<div class=\"column is-1\">";
             echo "<h3><b>O2,5</b></h3>";
             echo "</div>";
             echo "<div class=\"column is-1\">";
             echo "<h3>".$O25."%</h3>";
-            echo "</div>";
-
-            echo "<div class=\"column is-1\">";
-            echo "<h3><b>U2,5</b></h3>";
-            echo "</div>";
-            echo "<div class=\"column is-1\">";
-            echo "<h3>".$U25."%</h3>";
             echo "</div>";
 
             echo "<div class=\"column is-1\">";
