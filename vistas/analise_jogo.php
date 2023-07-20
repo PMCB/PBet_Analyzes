@@ -96,7 +96,6 @@
             echo "<div class=\"column is-1\">";
             echo "<h3>".$O25_resultado."</h3>";
             echo "</div>";
-            echo "</div>";
 
             echo "<div class=\"column is-1\">";
             echo "<h3 style=\"text-align: right;\"><b>BTTS</b></h3>";
@@ -105,6 +104,7 @@
             echo "<h3>".$btts_resultado."</h3>";
             echo "</div>";
 
+            echo "</div>";
             echo "</div>";
     
         }else{
