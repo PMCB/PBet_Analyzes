@@ -103,8 +103,7 @@
             echo "<div class=\"column is-2\">";
             echo "<h3>".$btts_resultado."</h3>";
             echo "</div>";
-
-            echo "</div>";
+            
             echo "</div>";
     
         }else{
@@ -196,6 +195,9 @@
             echo "<h3>".$Odd_BTTS_No."</h3>";
             echo "</div>";
             echo "</div>";
+
+            echo "</div>";
+
         }else{
             include "./inc/error_alert.php";
         }
