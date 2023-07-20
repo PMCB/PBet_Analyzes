@@ -12,8 +12,8 @@
     <?php
         include "./inc/btn_back.php";
 
-        $check_game=connection();
-        $check_game=$check_game->query("SELECT * FROM prog WHERE id='$id'");
+        $check_conn=connection();
+        $check_game=$check_conn->query("SELECT * FROM prog WHERE id='$id'");
 
         if ($check_game->rowCount()>0){ 
             $dados=$check_game->fetch();
@@ -112,4 +112,29 @@
         }
         $check_game=null;
     ?>    
+</div>
+
+<div class="container pb-6 pt-6">
+    <?php        
+        $check_game=$check_conn->query("select team_fs from equipas where team_ss = '$eq_casa_ss'");
+
+        if ($check_game->rowCount()>0){ 
+            $dados=$check_game->fetch();
+            $eq_casa_fs=$dados['team_fs'];
+        }else{
+            include "./inc/error_alert.php";
+        }
+        $check_game=null;
+
+        $check_game=connection();
+        $check_game=$check_game->query("select team_fs from equipas where team_ss = '$eq_fora_ss'");
+
+        if ($check_game->rowCount()>0){ 
+            $dados=$check_game->fetch();
+            $eq_fora_fs=$dados['team_fs'];
+        }else{
+            include "./inc/error_alert.php";
+        }
+        $check_game=null;        
+    ?>
 </div>
