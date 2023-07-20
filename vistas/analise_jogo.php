@@ -44,6 +44,13 @@
             $O25_resultado=$dados['O25_resultado'];
 
             echo "<h1 class=\"title\"> ".$pos_eq_casa."º   <b>".$eq_casa_ss."></b> VS <b>".$eq_fora_ss."   </b>".$pos_eq_fora."º</h1>";
+
+            echo "<div class=\"columns\">";
+            echo "<div class=\"column is-1\">";
+            echo "<b>Prob 1</b>";
+
+            echo "</div>";
+            echo "</div>";
     
         }else{
             include "./inc/error_alert.php";
