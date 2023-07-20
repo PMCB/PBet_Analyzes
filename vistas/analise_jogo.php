@@ -204,3 +204,28 @@
         $check_game=null;
     ?>
 </div>
+
+<div class="container pb-6 pt-6">
+    <?php
+        echo "<table>";
+        echo "<tr>";
+        echo "<th></th>";
+        echo "<th>Geral</th>";
+        echo "<th>Casa</th>";
+        echo "<th>Fora</th>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>".$eq_casa_ss."</td>";
+        echo "<td>".$pos_eq_casa."</td>";
+        echo "<td>".$pos_eq_casa_home."</td>";
+        echo "<td>".$pos_eq_casa_away."</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>".$eq_fora_ss."</td>";
+        echo "<td>".$pos_eq_fora."</td>";
+        echo "<td>".$pos_eq_fora_home."</td>";
+        echo "<td>".$pos_eq_fora_away."</td>";
+        echo "</tr>";
+        echo "</table>";
+    ?>
+</div>
