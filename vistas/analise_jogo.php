@@ -600,5 +600,65 @@
         echo "</table>";
         echo "</div>";
         echo "</div>";
+
+
+
+
+        echo "<div class=\"column\">";
+        echo "<h1><b>Antos</b></h1>";
+        echo "<table class=\"table is-striped\">";
+        
+        echo "<tr>";
+        echo "<th></th>";
+        echo "<th>Casa</th>";
+        echo "<th>Fora</th>";
+        echo "</tr>";
+
+        echo "<tr>";
+        echo "<td>".$eq_casa_ss."</td>";
+
+        $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_home),2) pball_h FROM `jogos` where Home ='".$eq_casa_fs."';");
+        if ($poss_ball->rowCount()>0){ 
+            $dados=$poss_ball->fetch();
+            echo "<td>".$dados['pball_h']."%</td>";
+
+        }else{
+            echo "<td></td>";
+        }
+        $poss_ball=null;
+        $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_away),2) pball_a FROM `jogos` where Away ='".$eq_casa_fs."';");
+        if ($poss_ball->rowCount()>0){ 
+            $dados=$poss_ball->fetch();
+            echo "<td>".$dados['pball_a']."%</td>";
+
+        }else{
+            echo "<td></td>";
+        }
+        $poss_ball=null;
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>".$eq_fora_ss."</td>";
+        $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_home),2) pball_h FROM `jogos` where Home ='".$eq_fora_fs."';");
+        if ($poss_ball->rowCount()>0){ 
+            $dados=$poss_ball->fetch();
+            echo "<td>".$dados['pball_h']."%</td>";
+
+        }else{
+            echo "<td></td>";
+        }
+        $poss_ball=null;
+        $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_away),2) pball_a FROM `jogos` where Away ='".$eq_fora_fs."';");
+        if ($poss_ball->rowCount()>0){ 
+            $dados=$poss_ball->fetch();
+            echo "<td>".$dados['pball_a']."%</td>";
+
+        }else{
+            echo "<td></td>";
+        }
+        $poss_ball=null;
+        echo "</tr>";
+        echo "</table>";
+        echo "</div>";
+        echo "</div>";
     ?>
 </div>
