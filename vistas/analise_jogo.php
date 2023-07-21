@@ -207,9 +207,10 @@
 
 <div class="container pb-6 pt-6">
     <?php
-        echo "<h1>Classificação</h1>";
+        
         echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
+        echo "<h1><b>Classificação</b></h1>";
         echo "<table class=\"table is-striped\">";
         echo "<tr>";
         echo "<th></th>";
@@ -233,8 +234,9 @@
         echo "</div>";
 
 
-        echo "<h1>Vitorias \ Empates \ Derrotas</h1>";
+        
         echo "<div class=\"column\">";
+        echo "<h1><b>Vitorias \ Empates \ Derrotas</b></h1>";
         echo "<table class=\"table is-striped\">";
         echo "<tr>";
         echo "<th></th>";
