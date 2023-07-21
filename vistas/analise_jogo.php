@@ -506,7 +506,6 @@
         echo "</div>";
         echo "</div>";
 
-        echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
         echo "<h1><b>Analise Classificativa Fora</b></h1>";
         echo "<table class=\"table is-striped\">";
@@ -537,7 +536,6 @@
         $class=null;
         }
         echo "</table>";
-        echo "</div>";
         echo "</div>";
         echo "</div>";
     ?>
