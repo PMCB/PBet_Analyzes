@@ -504,7 +504,6 @@
         }
         echo "</table>";
         echo "</div>";
-        echo "</div>";
 
         echo "<div class=\"column\">";
         echo "<h1><b>Analise Classificativa Fora</b></h1>";
