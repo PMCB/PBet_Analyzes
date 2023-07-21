@@ -539,5 +539,6 @@
         echo "</table>";
         echo "</div>";
         echo "</div>";
+        echo "</div>";
     ?>
 </div>
