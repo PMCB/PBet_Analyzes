@@ -9,8 +9,9 @@
 </div>
 
 <div class="container pb-6 pt-6">
-<a href="index.php?vista=bet&id_up='$id' class="button is-success is-rounded is-small">Apostar</a>
     <?php
+        $bt='<a href="index.php?vista=btts_m_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>';
+        echo $bt;
         include "./inc/btn_back.php";
 
         $check_conn=connection();
