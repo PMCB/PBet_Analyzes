@@ -479,25 +479,25 @@
         
         echo "<tr>";
         echo "<th>Data</th>";
-        echo "<th style=\"text-align: center;\">Pos Casa</th>";
-        echo "<th style=\"text-align: center;\">Eq Casa</th>";
-        echo "<th style=\"text-align: center;\">Golos Casa</th>";
-        echo "<th style=\"text-align: center;\">Golos Fora</th>";
-        echo "<th style=\"text-align: center;\">Eq Fora</th>";
-        echo "<th style=\"text-align: center;\">Pos Fora</th>";
+        echo "<th class=\"data_table\">Pos Casa</th>";
+        echo "<th class=\"data_table\">Eq Casa</th>";
+        echo "<th class=\"data_table\">Golos Casa</th>";
+        echo "<th class=\"data_table\">Golos Fora</th>";
+        echo "<th class=\"data_table\">Eq Fora</th>";
+        echo "<th class=\"data_table\">Pos Fora</th>";
         echo "</tr>";
         $class=$check_conn->query("SELECT data,pos_eq_casa, eq_casa,golos_casa,pos_eq_fora,eq_fora,golos_fora FROM `prog` where resultado != '' and eq_casa = '".$eq_casa_ss."' and pos_eq_fora BETWEEN (SELECT pos_eq_fora FROM `prog` where id ='".$id."')-3 and (SELECT pos_eq_fora FROM `prog` where id ='".$id."')+3 order by data DESC;");
         if ($class->rowCount()>0){ 
             $class=$class->fetchAll();
             foreach($class as $rows){
                 echo '<tr>';
-                echo '<td style=\"text-align: center;font-size: 12px;\">'.$rows['data'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_casa'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['eq_casa'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['golos_casa'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['golos_fora'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['eq_fora'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_fora'].'</td>';
+                echo '<td class=\"table_class\">'.$rows['data'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['pos_eq_casa'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['eq_casa'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['golos_casa'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['golos_fora'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['eq_fora'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['pos_eq_fora'].'</td>';
                 echo "</tr>";             
             }
         $class=null;
@@ -511,25 +511,25 @@
         
         echo "<tr>";
         echo "<th>Data</th>";
-        echo "<th style=\"text-align: center;\">Pos Casa</th>";
-        echo "<th style=\"text-align: center;\">Eq Casa</th>";
-        echo "<th style=\"text-align: center;\">Golos Casa</th>";
-        echo "<th style=\"text-align: center;\">Golos Fora</th>";
-        echo "<th style=\"text-align: center;\">Eq Fora</th>";
-        echo "<th style=\"text-align: center;\">Pos Fora</th>";
+        echo "<th class=\"data_table\">Pos Casa</th>";
+        echo "<th class=\"data_table\">Eq Casa</th>";
+        echo "<th class=\"data_table\">Golos Casa</th>";
+        echo "<th class=\"data_table\">Golos Fora</th>";
+        echo "<th class=\"data_table\">Eq Fora</th>";
+        echo "<th class=\"data_table\">Pos Fora</th>";
         echo "</tr>";
         $class=$check_conn->query("SELECT data,pos_eq_casa, eq_casa,golos_casa,pos_eq_fora,eq_fora,golos_fora FROM `prog` where resultado != '' and eq_fora = '".$eq_fora_ss."' and pos_eq_casa BETWEEN (SELECT pos_eq_casa FROM `prog` where id ='".$id."')-3 and (SELECT pos_eq_casa FROM `prog` where id ='".$id."')+3 order by data DESC;");
         if ($class->rowCount()>0){ 
             $class=$class->fetchAll();
             foreach($class as $rows){
                 echo '<tr>';
-                echo '<td style=\"text-align: center;font-size: 12px;\">'.$rows['data'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_casa'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['eq_casa'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['golos_casa'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['golos_fora'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['eq_fora'].'</td>';
-                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_fora'].'</td>';
+                echo '<td class=\"table_class\">'.$rows['data'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['pos_eq_casa'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['eq_casa'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['golos_casa'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['golos_fora'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['eq_fora'].'</td>';
+                echo '<td class=\"data_table\">'.$rows['pos_eq_fora'].'</td>';
                 echo "</tr>";             
             }
         $class=null;

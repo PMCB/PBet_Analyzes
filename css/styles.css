@@ -32,3 +32,12 @@ body,html{
     background-color:mediumseagreen;
     color: white;
 }
+
+.data_table{
+    text-align: center;
+    font-size: 12px;
+}
+
+.table_class {
+    text-align: center;
+}
