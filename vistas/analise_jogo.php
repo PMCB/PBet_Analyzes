@@ -544,6 +544,9 @@
         echo "</table>";
         echo "</div>";
 
+
+        echo "<div class=\"container pb-6 pt-6\">";
+        echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
         echo "<h1><b>Posse de Bola</b></h1>";
         echo "<table class=\"table is-striped\">";
@@ -605,7 +608,7 @@
 
 
         echo "<div class=\"column\">";
-        echo "<h1><b>Antos</b></h1>";
+        echo "<h1><b>Cantos</b></h1>";
         echo "<table class=\"table is-striped\">";
         
         echo "<tr>";
@@ -658,6 +661,8 @@
         $poss_ball=null;
         echo "</tr>";
         echo "</table>";
+        echo "</div>";
+        echo "</div>";
         echo "</div>";
         echo "</div>";
     ?>
