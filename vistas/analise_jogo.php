@@ -475,7 +475,7 @@
         echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
         echo "<table class=\"table is-striped\">";
-        echo "</table>";
+        
         echo "<tr>";
         echo "<th>Data</th>";
         echo "<th style=\"text-align: center;\">Pos Casa</th>";
@@ -500,6 +500,7 @@
                 echo "</tr>";             
             }
         }
+        echo "</table>";
         echo "</div>";
         echo "</div>";
         echo "</div>";
