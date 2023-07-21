@@ -602,10 +602,6 @@
         echo "</tr>";
         echo "</table>";
         echo "</div>";
-        echo "</div>";
-
-
-
 
         echo "<div class=\"column\">";
         echo "<h1><b>Cantos</b></h1>";
