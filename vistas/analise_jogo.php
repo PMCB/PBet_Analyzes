@@ -619,7 +619,7 @@
         $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_home),2) pball_h FROM `jogos` where Home ='".$eq_casa_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_h']."%</td>";
+            echo "<td>".$dados['pball_h']."</td>";
 
         }else{
             echo "<td></td>";
@@ -628,7 +628,7 @@
         $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_away),2) pball_a FROM `jogos` where Away ='".$eq_casa_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_a']."%</td>";
+            echo "<td>".$dados['pball_a']."</td>";
 
         }else{
             echo "<td></td>";
@@ -640,7 +640,7 @@
         $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_home),2) pball_h FROM `jogos` where Home ='".$eq_fora_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_h']."%</td>";
+            echo "<td>".$dados['pball_h']."</td>";
 
         }else{
             echo "<td></td>";
@@ -649,7 +649,7 @@
         $poss_ball=$check_conn->query("SELECT round (avg(CornerKicks_away),2) pball_a FROM `jogos` where Away ='".$eq_fora_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_a']."%</td>";
+            echo "<td>".$dados['pball_a']."</td>";
 
         }else{
             echo "<td></td>";
@@ -657,6 +657,17 @@
         $poss_ball=null;
         echo "</tr>";
         echo "</table>";
+        
+        $corner=$check_conn->query("select (SELECT round (avg(CornerKicks_home),2) FROM `jogos` where Home ='".$eq_casa_fs."')+ (SELECT round (avg(CornerKicks_away),2) FROM `jogos` where Away ='".$eq_fora_fs."') total from dual;");
+        if ($corner->rowCount()>0){ 
+            $dados=$corner->fetch();
+            echo "<h1><b>Prognóstico: </b>".$dados['total']."</h1>";
+
+        }else{
+            echo "<h1><b>Prognóstico: </b>"."</h1>";
+        }
+        $poss_ball=null;
+        
         echo "</div>";
         echo "</div>";
         echo "</div>";
