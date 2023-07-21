@@ -491,7 +491,7 @@
             $class=$class->fetchAll();
             foreach($class as $rows){
                 echo '<tr>';
-                echo '<td style=\"text-align: center;\">'.$rows['data'].'</td>';
+                echo '<td style=\"text-align: center;font-size: 12px;\">'.$rows['data'].'</td>';
                 echo '<td style=\"text-align: center;\">'.$rows['pos_eq_casa'].'</td>';
                 echo '<td style=\"text-align: center;\">'.$rows['eq_casa'].'</td>';
                 echo '<td style=\"text-align: center;\">'.$rows['golos_casa'].'</td>';
@@ -523,7 +523,7 @@
             $class=$class->fetchAll();
             foreach($class as $rows){
                 echo '<tr>';
-                echo '<td style=\"text-align: center;\">'.$rows['data'].'</td>';
+                echo '<td style=\"text-align: center;font-size: 12px;\">'.$rows['data'].'</td>';
                 echo '<td style=\"text-align: center;\">'.$rows['pos_eq_casa'].'</td>';
                 echo '<td style=\"text-align: center;\">'.$rows['eq_casa'].'</td>';
                 echo '<td style=\"text-align: center;\">'.$rows['golos_casa'].'</td>';
