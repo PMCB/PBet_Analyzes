@@ -505,14 +505,7 @@
         echo "</table>";
         echo "</div>";
         echo "</div>";
-        echo "</div>";
 
-
-
-
-        echo "<br>";
-
-        echo "<div class=\"container pb-6 pt-6\">";
         echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
         echo "<h1><b>Analise Classificativa Fora</b></h1>";
@@ -544,7 +537,6 @@
         $class=null;
         }
         echo "</table>";
-        echo "</div>";
         echo "</div>";
         echo "</div>";
     ?>
