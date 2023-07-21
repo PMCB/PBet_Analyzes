@@ -474,6 +474,7 @@
         echo "<div class=\"container pb-6 pt-6\">";
         echo "<div class=\"columns\">";
         echo "<div class=\"column\">";
+        echo "<h1><b>Analise Classificativa Casa</b></h1>";
         echo "<table class=\"table is-striped\">";
         
         echo "<tr>";
@@ -490,15 +491,57 @@
             $class=$class->fetchAll();
             foreach($class as $rows){
                 echo '<tr>';
-                echo '<td>'.$rows['data'].'</td>';
-                echo '<td>'.$rows['pos_eq_casa'].'</td>';
-                echo '<td>'.$rows['eq_casa'].'</td>';
-                echo '<td>'.$rows['golos_casa'].'</td>';
-                echo '<td>'.$rows['golos_fora'].'</td>';
-                echo '<td>'.$rows['eq_fora'].'</td>';
-                echo '<td>'.$rows['pos_eq_fora'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['data'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_casa'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['eq_casa'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['golos_casa'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['golos_fora'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['eq_fora'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_fora'].'</td>';
                 echo "</tr>";             
             }
+        $class=null;
+        }
+        echo "</table>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+
+
+
+
+        echo "<br>";
+
+        echo "<div class=\"container pb-6 pt-6\">";
+        echo "<div class=\"columns\">";
+        echo "<div class=\"column\">";
+        echo "<h1><b>Analise Classificativa Fora</b></h1>";
+        echo "<table class=\"table is-striped\">";
+        
+        echo "<tr>";
+        echo "<th>Data</th>";
+        echo "<th style=\"text-align: center;\">Pos Casa</th>";
+        echo "<th style=\"text-align: center;\">Eq Casa</th>";
+        echo "<th style=\"text-align: center;\">Golos Casa</th>";
+        echo "<th style=\"text-align: center;\">Golos Fora</th>";
+        echo "<th style=\"text-align: center;\">Eq Fora</th>";
+        echo "<th style=\"text-align: center;\">Pos Fora</th>";
+        echo "</tr>";
+        $class=$check_conn->query("SELECT data,pos_eq_casa, eq_casa,golos_casa,pos_eq_fora,eq_fora,golos_fora FROM `prog` where resultado != '' and eq_fora = '".$eq_fora_ss."' and pos_eq_casa BETWEEN (SELECT pos_eq_casa FROM `prog` where id ='".$id."')-3 and (SELECT pos_eq_casa FROM `prog` where id ='".$id."')+3 order by data DESC;");
+        if ($class->rowCount()>0){ 
+            $class=$class->fetchAll();
+            foreach($class as $rows){
+                echo '<tr>';
+                echo '<td style=\"text-align: center;\">'.$rows['data'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_casa'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['eq_casa'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['golos_casa'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['golos_fora'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['eq_fora'].'</td>';
+                echo '<td style=\"text-align: center;\">'.$rows['pos_eq_fora'].'</td>';
+                echo "</tr>";             
+            }
+        $class=null;
         }
         echo "</table>";
         echo "</div>";
