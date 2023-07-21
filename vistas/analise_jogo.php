@@ -540,38 +540,7 @@
 
 
         echo "<br>";
-
-        echo "<div class=\"container pb-6 pt-6\">";
-        echo "<div class=\"columns\">";
-        echo "<div class=\"column\">";
-        echo "<h1><b>Analise Classificativa Casa</b></h1>";
-        echo "<table class=\"table is-striped\">";
         
-        echo "<tr>";
-        echo "<th>Data</th>";
-        echo "<th>Pos Casa</th>";
-        echo "<th>Eq Casa</th>";
-        echo "<th>Golos Casa</th>";
-        echo "<th>Golos Fora</th>";
-        echo "<th>Eq Fora</th>";
-        echo "<th>Pos Fora</th>";
-        echo "</tr>";
-        $class=$check_conn->query("SELECT data,pos_eq_casa, eq_casa,golos_casa,pos_eq_fora,eq_fora,golos_fora FROM `prog` where resultado != '' and eq_casa = '".$eq_casa_ss."' and pos_eq_fora BETWEEN (SELECT pos_eq_fora FROM `prog` where id ='".$id."')-3 and (SELECT pos_eq_fora FROM `prog` where id ='".$id."')+3 order by data DESC;");
-        if ($class->rowCount()>0){ 
-            $class=$class->fetchAll();
-            foreach($class as $rows){
-                echo '<tr>';
-                echo '<td class=\"data_table\">'.$rows['data'].'</td>';
-                echo '<td>'.$rows['pos_eq_casa'].'</td>';
-                echo '<td>'.$rows['eq_casa'].'</td>';
-                echo '<td>'.$rows['golos_casa'].'</td>';
-                echo '<td>'.$rows['golos_fora'].'</td>';
-                echo '<td>'.$rows['eq_fora'].'</td>';
-                echo '<td>'.$rows['pos_eq_fora'].'</td>';
-                echo "</tr>";             
-            }
-        $class=null;
-        }
         echo "</table>";
         echo "</div>";
 
@@ -591,16 +560,16 @@
         $poss_ball=$check_conn->query("SELECT round (avg(BallPossession_home),2) pball_h FROM `jogos` where Home ='".$eq_casa_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_h']."</td>";
+            echo "<td>".$dados['pball_h']."%</td>";
 
         }else{
             echo "<td></td>";
         }
         $poss_ball=null;
-        $poss_ball=$check_conn->query("SELECT round (avg(BallPossession_home),2) pball_a FROM `jogos` where Away ='".$eq_casa_fs."';");
+        $poss_ball=$check_conn->query("SELECT round (avg(BallPossession_away),2) pball_a FROM `jogos` where Away ='".$eq_casa_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_a']."</td>";
+            echo "<td>".$dados['pball_a']."%</td>";
 
         }else{
             echo "<td></td>";
@@ -612,16 +581,16 @@
         $poss_ball=$check_conn->query("SELECT round (avg(BallPossession_home),2) pball_h FROM `jogos` where Home ='".$eq_fora_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_h']."</td>";
+            echo "<td>".$dados['pball_h']."%</td>";
 
         }else{
             echo "<td></td>";
         }
         $poss_ball=null;
-        $poss_ball=$check_conn->query("SELECT round (avg(BallPossession_home),2) pball_a FROM `jogos` where Away ='".$eq_fora_fs."';");
+        $poss_ball=$check_conn->query("SELECT round (avg(BallPossession_away),2) pball_a FROM `jogos` where Away ='".$eq_fora_fs."';");
         if ($poss_ball->rowCount()>0){ 
             $dados=$poss_ball->fetch();
-            echo "<td>".$dados['pball_a']."</td>";
+            echo "<td>".$dados['pball_a']."%</td>";
 
         }else{
             echo "<td></td>";
