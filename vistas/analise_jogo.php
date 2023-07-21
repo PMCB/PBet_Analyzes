@@ -10,6 +10,7 @@
 
 <div class="container pb-6 pt-6">
     <?php
+        echo "<a href=\"index.php?vista=bet&id_up='".$id."' class=\"button is-success is-rounded is-small\">Apostar</a>";
         include "./inc/btn_back.php";
 
         $check_conn=connection();
