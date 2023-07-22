@@ -87,7 +87,7 @@
                                
             $tabla.='             
                     <td>
-                        <a href="index.php?vista=btts_m_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
+                        <a href="index.php?vista=bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
                     </td>
                     <td>
                         <a href="index.php?vista=analise_jogo&id_up='.$rows['id'].'" class="button is-danger is-outlined is-small">Análise</a>
