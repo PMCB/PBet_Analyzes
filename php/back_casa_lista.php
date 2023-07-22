@@ -147,6 +147,7 @@
      
 
      $connection=null;
+     $connection_v2=null;
      echo $tabla;
 
      if($total>=1 && $pagina<=$Npaginas){

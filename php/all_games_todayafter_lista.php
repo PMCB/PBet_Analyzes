@@ -77,6 +77,11 @@
                     $tabla.='<td>'.$rows['prob_1'].'%</span></td>
                     <td>'.$rows['prob_x'].'%</td> 
                     <td>'.$rows['prob_2'].'%</td>';
+
+                    $consulta_odd1X2="select Odd_H,Odd_D,Odd_A from jogos where Home = (select team_fs from equipas where team_ss = '".$rows['eq_casa']."') and Away = (select team_fs from equipas where team_ss = '".$rows['eq_fora']."')";                    
+                    $connection_v2=connection_v2();                    
+                    $odds=$connection_v2->query($consulta_odd1X2);
+                    $odds=$odds->fetch();
                     $tabla.='<td>'.$odds['Odd_H'].'</td><td>'.$odds['Odd_D'].'</td><td>'.$odds['Odd_A'].'</td>';
 
                                
@@ -122,6 +127,7 @@
      
 
      $connection=null;
+     $connection_v2=null;
      echo $tabla;
 
      if($total>=1 && $pagina<=$Npaginas){
