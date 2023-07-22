@@ -9,7 +9,7 @@
     }else{
         $consulta_dados="SELECT * FROM prog WHERE data >= CURDATE() ORDER BY data ASC,league LIMIT $inicio,$registros";
 
-        $consulta_total="SELECT count(id) FROM prog WHERE bdata >= CURDATE()";
+        $consulta_total="SELECT count(id) FROM prog WHERE data >= CURDATE()";
     }
 
     $connection=connection();
