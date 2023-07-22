@@ -45,6 +45,7 @@
                     <th>BTTS</th>
                     <th>O2,5</th>
                     <th>1X2</th>
+                    <th>Análise</th>
                 </tr>
             </thead>
             <tbody>
@@ -73,7 +74,8 @@
                     <td>'.$rows['O25'].'%</td>    
                     <td>'.$rows['btts_resultado'].'</td>    
                     <td>'.$rows['O25_resultado'].'</td>    
-                    <td>'.$rows['bet_resultado'].'</td>             
+                    <td>'.$rows['bet_resultado'].'</td>
+                    <td><a href="index.php?vista=analise_jogo&id_up='.$rows['id'].'" class="button is-danger is-outlined is-small">Análise</a></td>
                 </tr>
             ';
             $contador++;
