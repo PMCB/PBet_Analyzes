@@ -16,7 +16,7 @@
         }
 
         $pagina=clean_chain($pagina);
-        $url="index.php?vista=btts_m&page=";
+        $url="index.php?vista=all_games_todayafter&page=";
         $registros=15;
         $busca="";
 
