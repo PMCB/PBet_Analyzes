@@ -1,4 +1,7 @@
 <div class="buttons" align="center">
+          <a class="button is-success is-rounded" href="index.php?vista=all_games_todayafter_lista" style="background-color: green;">
+            All Games
+          </a>
           <a class="button is-success is-rounded" href="index.php?vista=btts" style="background-color: green;">
             BTTS
           </a>
