@@ -41,6 +41,7 @@
                     <th>X</th>
                     <th>2</th>
                     <th>Acções</th>
+                    <th>Análise</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,6 +90,9 @@
             $tabla.='<td>'.$rows['prob_2'].'%</td>            
                     <td>                        
                         <a href="index.php?vista=empate_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
+                    </td>
+                    <td>
+                        <a href="index.php?vista=analise_jogo&id_up='.$rows['id'].'" class="button is-danger is-outlined is-small">Análise</a>
                     </td>
                 </tr>
             ';

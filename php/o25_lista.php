@@ -38,7 +38,8 @@
                     <th>% Over 2,5</th>
                     <th>Odd O2,5</th>
                     <th>Odd U2,5</th>
-                    <th colspan="2">Acções</th>
+                    <th>Acções</th>
+                    <th>Análise</th>
                 </tr>
             </thead>
             <tbody>
@@ -83,6 +84,9 @@
                                
             $tabla.='<td>
                         <a href="index.php?vista=o25_bet&id_up='.$rows['id'].'" class="button is-success is-rounded is-small">Apostar</a>
+                    </td>
+                    <td>
+                        <a href="index.php?vista=analise_jogo&id_up='.$rows['id'].'" class="button is-danger is-outlined is-small">Análise</a>
                     </td>
                 </tr>
             ';
